@@ -8,17 +8,10 @@ export const Global = createGlobalStyle`
     box-sizing: border-box;
   }
   :root {
+      background-color: #293039;
       font-size: ${px2vw(24)};
-      font-family: 'Roboto', sans-serif ;
-      color:#37373d;
-
-      @media (min-width: 768px) {
-        font-size: ${px2vw(18)};
-      }
-
-      @media (min-width: 1024px) {
-        font-size: ${px2vw(16)};
-      }
+      font-family: 'Inter', sans-serif ;
+      color:white;
     }
 `;
 
