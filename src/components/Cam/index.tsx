@@ -8,10 +8,12 @@ const videoConstraints = {
   facingMode: "user",
 };
 
+
+
 export const WebcamComponent= () => {
   const webcamRef = useRef(null);
 
-  const capture = React.useCallback(() => {
+  /* const capture = React.useCallback(() => {
     //@ts-ignore
     const imageSrc = webcamRef.current.getScreenshot();
     var link = document.createElement("a");
@@ -21,18 +23,19 @@ export const WebcamComponent= () => {
     link.click();
     document.body.removeChild(link);
     alert(imageSrc);
-  }, [webcamRef]);
+  }, [webcamRef]); */
   return (
     <>
       <Webcam
         audio={false}
-        height={720}
         ref={webcamRef}
+        width={'100%'}
+        height={'100%'}
         screenshotFormat="image/jpeg"
-        width={1280}
         videoConstraints={videoConstraints}
+        style={{borderRadius:20}}
       />
-      <button onClick={capture}>Capture photo</button>
+     {/*  <button onClick={capture}>Capture photo</button> */}
     </>
   );
 };

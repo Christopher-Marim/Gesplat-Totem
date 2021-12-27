@@ -2,14 +2,16 @@ import { Container, WrapperCpf, WrapperQRCODE } from "./styles";
 import { WebcamComponent } from "../../components/Cam";
 import { QrCodeComponent } from "../../components/QrCode";
 import { Logo } from "../../components/LogoComponent";
+import { useNavigate } from "react-router-dom";
 
 export function HomeScreen() {
+  const navigate = useNavigate();
   return (
     <Container>
       <Logo></Logo>
       <WrapperCpf>
         <label>DIGITE SEU CPF</label>
-        <input inputMode='numeric' placeholder="123.456.789-10"></input>
+        <input inputMode='numeric' placeholder="123.456.789-10" onClick={()=>{navigate('user')}}></input>
       </WrapperCpf>
       <h3>OU</h3>
       <WrapperQRCODE>
