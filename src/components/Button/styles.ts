@@ -15,4 +15,7 @@ export const ButtonStyles = styled.button`
   justify-content:space-between;
   align-items:center;
   cursor:pointer;
+  position: absolute;
+  margin: 40px 0px;
+  bottom: 0;
 `;

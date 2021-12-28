@@ -9,6 +9,7 @@ export const Container = styled.div`
   align-items: center;
 `;
 export const Name = styled.h3`
+  font-size:25px;
   position: absolute;
   margin: 10px 0px;
   top: 0;
