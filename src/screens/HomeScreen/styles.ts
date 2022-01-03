@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   min-height: 100vh;
   width:100%;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   h3{
@@ -18,10 +18,11 @@ export const WrapperCpf = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width:60%;
+  width:50%;
 
   label{
     margin:30px;
+    letter-spacing:2px;
     font-size:22px;
   }
 
@@ -30,7 +31,7 @@ export const WrapperCpf = styled.div`
     height:50px;
     border-radius:8px;
     border:none;
-    width:100%;
+    width:525px;
     font-size:22px;
   }
   
@@ -41,6 +42,7 @@ export const WrapperQRCODE = styled.div`
   flex-direction: column;
   align-items: center;
   label{
+    letter-spacing:2px;
     margin-bottom:30px;
     font-size:22px;
   }

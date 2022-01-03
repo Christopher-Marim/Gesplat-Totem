@@ -8,7 +8,7 @@ export const Global = createGlobalStyle`
     box-sizing: border-box;
   }
   :root {
-      background-color: #293039;
+      background: linear-gradient(#7C2629,#3D1414);
       font-size: ${px2vw(24)};
       font-family: 'Inter', sans-serif ;
       color:white;

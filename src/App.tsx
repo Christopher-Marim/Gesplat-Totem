@@ -5,6 +5,7 @@ import { StateProvider } from "./hooks/state";
 import { CamScreen } from "./screens/CamScreen";
 import { CompleteScreen } from "./screens/CompleteScreen";
 import { HomeScreen } from "./screens/HomeScreen/index";
+import { ProcessScreen } from "./screens/ProcessScreen";
 import { UserScreen } from "./screens/UserScreen";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route element={<UserScreen />} path="/user" />
             <Route element={<CamScreen />} path="/cam" />
             <Route element={<CompleteScreen />} path="/finish" />
+            <Route element={<ProcessScreen />} path="/process" />
           </Routes>
         </StateProvider>
       </AuthProvider>

@@ -1,8 +1,9 @@
-import { Container, Name, WrapperQRCODE } from "./styles";
+import { Container, WrapperQRCODE } from "./styles";
 import { FiCheck } from "react-icons/fi";
 import { color } from "../../utils/colors";
 import { useEffect, useState } from "react";
 import { QrCodeComponent } from "../../components/QrCode";
+import { Logo } from "../../components/LogoComponent";
 export function CompleteScreen() {
   const [showQrCode, setShowQrCode] = useState(false);
 
@@ -14,10 +15,10 @@ export function CompleteScreen() {
 
   return (
     <Container>
-      <Name>GESPLAT</Name>
+      <Logo></Logo>
       {!showQrCode && (
         <>
-          <FiCheck color={color.verde} size={250}></FiCheck>
+          <FiCheck color={'white'} size={250}></FiCheck>
           <h1>
             ENTRADA <strong>FINALIZADA</strong>
             <br></br>AGUARDE SUA VEZ
