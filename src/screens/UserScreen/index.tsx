@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { Logo } from "../../components/LogoComponent";
+import user from "../../assets/user.svg";
 import { Container } from "./styles";
 
 export function UserScreen(){
@@ -8,7 +9,7 @@ export function UserScreen(){
     return(
         <Container>
             <Logo></Logo>
-            <img className="imgUser" src='https://www.lance.com.br/files/article_main/uploads/2021/02/28/603bdef934423.jpeg'></img>
+            <img className="imgUser" src={user} style={{backgroundColor:'whitesmoke'}}></img>
             <h3>OLÁ <strong>THALYS MARIM</strong>, TIRAREMOS UMA FOTO SUA PARA CONFIRMAR SUA PRESENÇA</h3>
             <Button onClick={()=>navigate('/cam')}><label>PROSSEGUIR</label></Button>
         </Container>

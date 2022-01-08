@@ -25,7 +25,10 @@ export const WrapperCpf = styled.div`
     letter-spacing:2px;
     font-size:22px;
   }
-
+ div{
+   display:flex;
+   align-items:center;
+ }
   input{
     padding:10px 20px;
     height:50px;
