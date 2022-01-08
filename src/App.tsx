@@ -6,6 +6,7 @@ import { CamScreen } from "./screens/CamScreen";
 import { CompleteScreen } from "./screens/CompleteScreen";
 import { HomeScreen } from "./screens/HomeScreen/index";
 import { ProcessScreen } from "./screens/ProcessScreen";
+import { SelectScreen } from "./screens/SelectScreen";
 import { UserScreen } from "./screens/UserScreen";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route element={<CamScreen />} path="/cam" />
             <Route element={<CompleteScreen />} path="/finish" />
             <Route element={<ProcessScreen />} path="/process" />
+            <Route element={<SelectScreen />} path="/select" />
           </Routes>
         </StateProvider>
       </AuthProvider>

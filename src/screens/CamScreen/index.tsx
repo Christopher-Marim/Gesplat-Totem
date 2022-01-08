@@ -13,7 +13,7 @@ export function CamScreen() {
       <WrapperCam>
         <WebcamComponent></WebcamComponent>
       </WrapperCam>
-      <Button onClick={()=>navigate('/process')}><label>FINALIZAR</label></Button>
+      <Button onClick={()=>navigate('/select')}><label>FINALIZAR</label></Button>
     </Container>
   );
 }
