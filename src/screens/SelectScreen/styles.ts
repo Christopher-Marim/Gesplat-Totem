@@ -83,3 +83,10 @@ export const Procedimento = styled.div`
     color: #f09c9c;
   }
 `;
+export const BsUnsheck = styled.div`
+  width:35px;
+  height:35px;
+  border-radius:5px;
+  border:2px solid white;
+
+`;

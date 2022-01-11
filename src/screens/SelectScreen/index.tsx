@@ -1,27 +1,37 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button";
-import { Container, Procedimento } from "./styles";
+import { BsUnsheck, Container, Procedimento } from "./styles";
 import { BsCheck2Square } from "react-icons/bs";
+import { useState } from "react";
+
+interface currentSelect{
+    id:string;
+    select:string;
+    date:string;
+    company:string;
+}
 
 export function SelectScreen(){
     const navigate = useNavigate();
 
-    const array=[
+    const [currentSelect, setCurrentSelect] = useState<currentSelect>();
+
+    const array:currentSelect[]=[
         {
             id:'1',
-            step:'Admissional',
+            select:'Admissional',
             date:'07/01/2022',
             company:'ETM Consultoria e Sistemas',
         },
         {
             id:'2',
-            step:'Demissional',
+            select:'Demissional',
             date:'07/01/2022',
             company:'Microsoft',
         },
         {
             id:'3',
-            step:'Demissional 2 Example',
+            select:'Demissional 2 Example',
             date:'08/01/2022',
             company:'Microsoft',
         },
@@ -32,13 +42,19 @@ export function SelectScreen(){
                 <h1>ESCOLHA QUAL A DEMANDA<br></br> PARA HOJE</h1>
                 <div className='procedimentos'>
                     {array.map((item)=>(
-                         <Procedimento key={item.id}>
+                         <Procedimento key={item.id} onClick={()=>{setCurrentSelect(item)}}>
                          <div>
-                         <h3>{item.step}</h3>
+                         <h3>{item.select}</h3>
                          <p>Data <strong>{item.date}</strong></p>
                          <p>Empresa <strong>{item.company}</strong></p>
                          </div>
-                         <BsCheck2Square color='white' size={40}></BsCheck2Square>
+                         {
+                             currentSelect?.id ==item.id?(
+                                 <BsCheck2Square color='#f09c9c' size={40}></BsCheck2Square>
+                             ):(
+                                 <BsUnsheck></BsUnsheck>
+                             )
+                         }
                      </Procedimento>
                     ))}
                    

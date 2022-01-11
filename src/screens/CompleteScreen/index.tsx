@@ -4,7 +4,10 @@ import { color } from "../../utils/colors";
 import { useEffect, useState } from "react";
 import { QrCodeComponent } from "../../components/QrCode";
 import { Logo } from "../../components/LogoComponent";
+import { Progressbar } from './../../components/ProgressBar/index';
+import { useNavigate } from 'react-router-dom';
 export function CompleteScreen() {
+  const navigate = useNavigate();
   const [showQrCode, setShowQrCode] = useState(false);
 
   useEffect(() => {
@@ -28,12 +31,14 @@ export function CompleteScreen() {
 
       {showQrCode && (
         <>
+        <Progressbar velocidade={0.02} onComplete={()=>{navigate('/')}}></Progressbar>
           <WrapperQRCODE>
             <QrCodeComponent text="https://www.etm.srv.br/"></QrCodeComponent>
           </WrapperQRCODE>
           <h1>
             ACESSE NOSSO SITE E VEJA SUA POSIÇÃO NA FILA NA PALMA DA SUA MÃO
           </h1>
+          <button  className="buttonBack" onClick={()=>{navigate('/')}}>Voltar ao Inicio</button>
         </>
       )}
     </Container>

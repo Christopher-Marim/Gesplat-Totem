@@ -7,6 +7,18 @@ export const Container = styled.div`
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  
+  .buttonBack{
+    width:400px;
+    padding:20px;
+    color:white;
+    background:transparent;
+    border:2px solid white;
+    border-radius:10px;
+    font-size:20px;
+    margin-bottom:20px;
+    cursor:pointer;
+  }
 
   h1{
   font-size:35px;
